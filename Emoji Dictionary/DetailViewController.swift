@@ -9,8 +9,12 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    
+    @IBOutlet weak var definitionLabel: UILabel!
 
     var emoji = "No Emoji"
+    var emojidef = "No Definition"
+    
     @IBOutlet weak var emojiLabel: UILabel!
     
     override func viewDidLoad() {
@@ -19,6 +23,8 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         emojiLabel.text = emoji
+        
+        definitionLabel.text = emojidef
     }
 
     override func didReceiveMemoryWarning() {

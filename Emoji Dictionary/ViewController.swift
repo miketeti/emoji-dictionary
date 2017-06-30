@@ -13,6 +13,8 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     @IBOutlet weak var EmojiTableView: UITableView!
     
     var emojis = ["😀","🤡","🐶","🌪","🍺","💩"]
+    var emojidefs = ["smiley face","silly clown","cute puppy","large tornado","pint of beer","pile of poo"]
+    var idxpath :Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,15 +37,18 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let emoji = emojis[indexPath.row]
-        performSegue(withIdentifier: "moveSegue", sender: emoji)
+        tableView.deselectRow(at: indexPath, animated: false)
+
+        idxpath = indexPath.row
+        performSegue(withIdentifier: "moveSegue", sender: self)
     }
     
     //this is the last function that runs before segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //constant to hold next ViewController
         let detailVC = segue.destination as! DetailViewController
-        detailVC.emoji = sender as! String
+        detailVC.emoji = emojis[idxpath]
+        detailVC.emojidef = emojidefs[idxpath]
     }
     
     override func didReceiveMemoryWarning() {

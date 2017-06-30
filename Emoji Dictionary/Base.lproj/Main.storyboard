@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -74,12 +73,12 @@
                         <constraints>
                             <constraint firstItem="Mff-cq-8YY" firstAttribute="centerX" secondItem="4E8-E6-ETz" secondAttribute="centerX" id="BES-aX-BY6"/>
                             <constraint firstItem="fpI-Ee-Wt3" firstAttribute="top" secondItem="0SQ-hL-wH4" secondAttribute="bottom" constant="60" id="N2t-um-TvD"/>
-                            <constraint firstItem="fpI-Ee-Wt3" firstAttribute="top" secondItem="4E8-E6-ETz" secondAttribute="topMargin" constant="80" id="cZd-8F-pD8"/>
                             <constraint firstItem="Mff-cq-8YY" firstAttribute="top" secondItem="fpI-Ee-Wt3" secondAttribute="bottom" constant="50" id="e1Y-zq-7sy"/>
                             <constraint firstItem="fpI-Ee-Wt3" firstAttribute="centerX" secondItem="4E8-E6-ETz" secondAttribute="centerX" id="ygZ-en-l3c"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="definitionLabel" destination="Mff-cq-8YY" id="LYl-DI-mIl"/>
                         <outlet property="emojiLabel" destination="fpI-Ee-Wt3" id="oYi-cL-I0x"/>
                     </connections>
                 </viewController>
