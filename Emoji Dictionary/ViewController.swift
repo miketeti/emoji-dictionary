@@ -41,7 +41,9 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     
     //this is the last function that runs before segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        //constant to hold next ViewController
+        let detailVC = segue.destination as! DetailViewController
+        detailVC.emoji = sender as! String
     }
     
     override func didReceiveMemoryWarning() {

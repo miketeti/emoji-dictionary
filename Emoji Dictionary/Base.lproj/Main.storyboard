@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -56,14 +57,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="💒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpI-Ee-Wt3">
-                                <rect key="frame" x="78" y="60" width="218" height="239"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpI-Ee-Wt3">
+                                <rect key="frame" x="78" y="124" width="218" height="239"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="200"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="This is a lovely church" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mff-cq-8YY">
-                                <rect key="frame" x="103" y="372" width="169" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a lovely church" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mff-cq-8YY">
+                                <rect key="frame" x="103" y="413" width="169" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -72,10 +73,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Mff-cq-8YY" firstAttribute="centerX" secondItem="4E8-E6-ETz" secondAttribute="centerX" id="BES-aX-BY6"/>
+                            <constraint firstItem="fpI-Ee-Wt3" firstAttribute="top" secondItem="0SQ-hL-wH4" secondAttribute="bottom" constant="60" id="N2t-um-TvD"/>
+                            <constraint firstItem="fpI-Ee-Wt3" firstAttribute="top" secondItem="4E8-E6-ETz" secondAttribute="topMargin" constant="80" id="cZd-8F-pD8"/>
                             <constraint firstItem="Mff-cq-8YY" firstAttribute="top" secondItem="fpI-Ee-Wt3" secondAttribute="bottom" constant="50" id="e1Y-zq-7sy"/>
                             <constraint firstItem="fpI-Ee-Wt3" firstAttribute="centerX" secondItem="4E8-E6-ETz" secondAttribute="centerX" id="ygZ-en-l3c"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emojiLabel" destination="fpI-Ee-Wt3" id="oYi-cL-I0x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gmn-b9-4gV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,10 +10,15 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    var emoji = "No Emoji"
+    @IBOutlet weak var emojiLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        emojiLabel.text = emoji
     }
 
     override func didReceiveMemoryWarning() {
