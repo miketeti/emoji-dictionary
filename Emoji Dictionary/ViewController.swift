@@ -22,7 +22,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         EmojiTableView.dataSource = self
         EmojiTableView.delegate = self
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //Returns the number of emojis in array
         return emojis.count
@@ -35,14 +35,20 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "moveSegue", sender: "🎮")
+        let emoji = emojis[indexPath.row]
+        performSegue(withIdentifier: "moveSegue", sender: emoji)
+    }
+    
+    //this is the last function that runs before segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
