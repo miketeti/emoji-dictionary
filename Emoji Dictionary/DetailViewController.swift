@@ -14,10 +14,7 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var definitionLabel: UILabel!
 
-    var emoji = "No Emoji"
-    var emojidef = "No Definition"
-    var emojicat = "No Category"
-    var emojibirthyear = "No Birth Year"
+    var emoji = Emoji()
     
     @IBOutlet weak var emojiLabel: UILabel!
     
@@ -26,13 +23,13 @@ class DetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        emojiLabel.text = emoji
+        emojiLabel.text = emoji.stringEmoji
         
-        definitionLabel.text = emojidef
+        definitionLabel.text = emoji.definition
         
-        categoryLabel.text = "Category: " + emojicat
+        categoryLabel.text = "Category: " + emoji.category
         
-        birthYearLabel.text = "BirthYear: " + emojibirthyear
+        birthYearLabel.text = "BirthYear: \(emoji.birthYear)"
     }
 
     override func didReceiveMemoryWarning() {

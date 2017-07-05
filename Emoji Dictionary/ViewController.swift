@@ -34,28 +34,22 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         let emoji = emojis[indexPath.row]
-        cell.textLabel?.text = emoji.category
+        cell.textLabel?.text = emoji.stringEmoji
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-
+        let emoji = emojis[indexPath.row]
         idxpath = indexPath.row
-        performSegue(withIdentifier: "moveSegue", sender: self)
+        performSegue(withIdentifier: "moveSegue", sender: emoji)
     }
     
     //this is the last function that runs before segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //constant to hold next ViewController
-        /*
         let detailVC = segue.destination as! DetailViewController
-        let emoji = emojis[indexPath.row]
-        detailVC.emoji = emoji.
-        detailVC.emojidef = emojiDefs[idxpath]
-        detailVC.emojicat = emojiCats[idxpath]
-        detailVC.emojibirthyear = emojiBirthYears[idxpath]
-         */
+        detailVC.emoji = sender as! Emoji
     }
     
     override func didReceiveMemoryWarning() {
