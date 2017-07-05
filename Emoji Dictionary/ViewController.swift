@@ -13,7 +13,9 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     @IBOutlet weak var EmojiTableView: UITableView!
     
     var emojis = ["😀","🤡","🐶","🌪","🍺","💩"]
-    var emojidefs = ["smiley face","silly clown","cute puppy","large tornado","pint of beer","pile of poo"]
+    var emojiDefs = ["smiley face","silly clown","cute puppy","large tornado","pint of beer","pile of poo"]
+    var emojiCats = ["Smileys & People","Smileys & People","Animals & Nature","Animals & Nature","Food & Drink","Smileys & People"]
+    var emojiBirthYears = ["2009","2010","2011","2012","2013","2014"]
     var idxpath :Int = 0
     
     override func viewDidLoad() {
@@ -48,7 +50,9 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         //constant to hold next ViewController
         let detailVC = segue.destination as! DetailViewController
         detailVC.emoji = emojis[idxpath]
-        detailVC.emojidef = emojidefs[idxpath]
+        detailVC.emojidef = emojiDefs[idxpath]
+        detailVC.emojicat = emojiCats[idxpath]
+        detailVC.emojibirthyear = emojiBirthYears[idxpath]
     }
     
     override func didReceiveMemoryWarning() {

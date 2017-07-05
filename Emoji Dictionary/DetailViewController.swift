@@ -9,11 +9,15 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    @IBOutlet weak var birthYearLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
     
     @IBOutlet weak var definitionLabel: UILabel!
 
     var emoji = "No Emoji"
     var emojidef = "No Definition"
+    var emojicat = "No Category"
+    var emojibirthyear = "No Birth Year"
     
     @IBOutlet weak var emojiLabel: UILabel!
     
@@ -25,6 +29,10 @@ class DetailViewController: UIViewController {
         emojiLabel.text = emoji
         
         definitionLabel.text = emojidef
+        
+        categoryLabel.text = "Category: " + emojicat
+        
+        birthYearLabel.text = "BirthYear: " + emojibirthyear
     }
 
     override func didReceiveMemoryWarning() {
