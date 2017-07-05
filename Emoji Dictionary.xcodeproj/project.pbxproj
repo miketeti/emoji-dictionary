@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7713ECAB1F0D10C1002558CE /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7713ECAA1F0D10C1002558CE /* Emoji.swift */; };
 		77FE33731F06924C0055A139 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FE33721F06924C0055A139 /* AppDelegate.swift */; };
 		77FE33751F06924D0055A139 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FE33741F06924C0055A139 /* ViewController.swift */; };
 		77FE33781F06924D0055A139 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77FE33761F06924D0055A139 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7713ECAA1F0D10C1002558CE /* Emoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Emoji.swift; path = ../Emoji.swift; sourceTree = "<group>"; };
 		77FE336F1F06924C0055A139 /* Emoji Dictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Emoji Dictionary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77FE33721F06924C0055A139 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77FE33741F06924C0055A139 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		77FE33711F06924C0055A139 /* Emoji Dictionary */ = {
 			isa = PBXGroup;
 			children = (
+				7713ECAA1F0D10C1002558CE /* Emoji.swift */,
 				77FE33721F06924C0055A139 /* AppDelegate.swift */,
 				77FE33741F06924C0055A139 /* ViewController.swift */,
 				77FE33841F06B3F60055A139 /* DetailViewController.swift */,
@@ -141,6 +144,7 @@
 			files = (
 				77FE33851F06B3F60055A139 /* DetailViewController.swift in Sources */,
 				77FE33751F06924D0055A139 /* ViewController.swift in Sources */,
+				7713ECAB1F0D10C1002558CE /* Emoji.swift in Sources */,
 				77FE33731F06924C0055A139 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +309,7 @@
 				77FE33831F06924D0055A139 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
